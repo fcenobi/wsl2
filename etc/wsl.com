@@ -1,0 +1,15 @@
+#Let’s enable extra metadata options by default
+[automount]
+enabled = true
+#root = /mnt/
+options = "metadata,umask=22,fmask=11"
+mountFsTab = false
+
+#Let’s enable DNS – even though these are turned on by default, we’ll specify here just to be explicit.
+[network]
+generateHosts = true
+generateResolvConf = true
+[interop]
+appendWindowsPath = true
+[user]
+#root
