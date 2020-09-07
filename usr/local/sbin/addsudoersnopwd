@@ -3,11 +3,18 @@
 #echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER-nopassword
 
 FILE=/etc/sudoers.d/$USER-nopassword
-echo $FILE
+#echo $FILE
 
 if [ ! -f "$FILE" ]; then
-    echo "creo sudoers no password "
+    echo "**************************"
+    echo "creo sudoers no password  "
+    echo "**************************"
     echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER-nopassword
+else 
+    echo "**************************"
+    echo "creo sudoers no password  "
+    echo "**************************"
+
 fi
 
-cat $FILE
+#cat $FILE
