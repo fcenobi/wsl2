@@ -6,14 +6,14 @@ FILE=/etc/sudoers.d/$USER-nopassword
 #echo $FILE
 
 if [ ! -f "$FILE" ]; then
-    echo "**************************"
-    echo "creo sudoers no password  "
-    echo "**************************"
+    echo "*********************************"
+    echo "* creo sudoers no password      *"
+    echo "*********************************"
     echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER-nopassword
 else 
-    echo "**************************"
-    echo "creo sudoers no password  "
-    echo "**************************"
+    echo "*********************************"
+    echo "* sudoers no password esistente *"
+    echo "*********************************"
 
 fi
 
